@@ -59,9 +59,9 @@ public class Jyanken_Chapter26 {
 		
 		if (myChoice.equals(pcChoice)) {
             System.out.println("あいこです"); 
-        } else if ((myChoice.equals("r") && myChoice.equals("s")) ||
-                   (myChoice.equals("s") && myChoice.equals("p")) ||
-                   (myChoice.equals("p") && myChoice.equals("r"))) {
+        } else if ((myChoice.equals("r") && pcChoice.equals("s")) ||
+                   (myChoice.equals("s") && pcChoice.equals("p")) ||
+                   (myChoice.equals("p") && pcChoice.equals("r"))) {
         	System.out.println( "自分の勝ちです");
         } else {
         	System.out.println( "自分の負けです");
