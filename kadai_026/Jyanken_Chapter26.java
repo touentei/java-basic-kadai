@@ -41,17 +41,11 @@ public class Jyanken_Chapter26 {
 	public String getRandom() {
 //		Random random = new Random();
 //        int hand = random.nextInt(3); // 0, 1, or 2
-		int hand = (int) Math.floor(Math.random() * 3);
-        switch (hand) {
-            case 0:
-                return "r";
-            case 1:
-                return "s";
-            case 2:
-                return "p";
-            default:
-                return "";
-        }
+		String[] hand = {"r","s","p"};
+		int number = (int) Math.floor(Math.random() * 3);
+//		System.out.println(number);
+		return hand[number];
+
 	};
 	
 	public void playGame(String myChoice,String pcChoice) {
@@ -60,7 +54,7 @@ public class Jyanken_Chapter26 {
 		handMap.put("s","チョキ");
 		handMap.put("p","パー");
 		
-		System.out.println("自分の手は" + myChoice + ",対戦相手の手は" + pcChoice);
+//		System.out.println("自分の手は" + myChoice + ",対戦相手の手は" + pcChoice);
 		System.out.println("自分の手は" + handMap.get(myChoice) + ",対戦相手の手は" + handMap.get(pcChoice));
 		
 		if (myChoice.equals(pcChoice)) {
